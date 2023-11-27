@@ -1,6 +1,8 @@
 package hengerprogram;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class HengerProgram
 {
@@ -39,12 +41,9 @@ public class HengerProgram
         return osszSuly;
     }
     
-    private void lista()
+    private List<Henger> lista()
     {
-        for (Henger henger : hengerek)
-        {
-            System.out.println(henger);
-        }
+        return Collections.unmodifiableList(hengerek);
     }
     
     private void run()
@@ -52,6 +51,10 @@ public class HengerProgram
         System.out.printf("Összesen %d db henger van a programban\n", Henger.getHengerDb());
         System.out.println("A hengerek átlagtérfogata: " + atlagTerfogat());
         System.out.println("A csövek összsúlya: " + csovekSulya());
+        for (Henger henger : lista())
+        {
+            System.out.println(henger);
+        }
         lista();
     }
     
