@@ -11,11 +11,10 @@ public class HengerProgram
     public HengerProgram()
     {
         hengerek = new ArrayList<>();
-        hengerek.add(new Henger(3, 5.1));
-        hengerek.add(new TomorHenger(3, 5.1));
-        hengerek.add(new TomorHenger(3, 5.1, 3));
-        hengerek.add(new Cso(3, 5.2, 1));
-        hengerek.add(new Cso(3, 5.2, 2, 2));
+        hengerek.add(new Henger(1, 1));
+        hengerek.add(new TomorHenger(1, 1));
+        hengerek.add(new Cso(1, 1, 0.5));
+        hengerek.add(new Cso(1, 1, 0.1));
     }
     
     private double atlagTerfogat()

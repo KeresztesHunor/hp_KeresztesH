@@ -12,6 +12,11 @@ public class Henger
         this.magassag = magassag;
         hengerDb++;
     }
+    
+    protected static void kivonEgyHengert()
+    {
+        hengerDb--;
+    }
 
     public static int getHengerDb()
     {

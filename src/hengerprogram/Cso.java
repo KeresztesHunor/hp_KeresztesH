@@ -6,8 +6,7 @@ public class Cso extends TomorHenger
 
     public Cso(double sugar, double magassag, double falvastagsag)
     {
-        super(sugar, magassag, 1);
-        this.falvastagsag = falvastagsag;
+        this(sugar, magassag, falvastagsag, 1);
     }
 
     public Cso(double sugar, double magassag, double falvastagsag, double fajsuly)
@@ -28,6 +27,7 @@ public class Cso extends TomorHenger
 
     @Override public double terfogat()
     {
-        return super.terfogat() - new Henger(super.getSugar() - falvastagsag, super.getMagassag()).terfogat();
+        kivonEgyHengert();
+        return super.terfogat() - new Henger(getSugar() - falvastagsag, getMagassag()).terfogat();
     }
 }
